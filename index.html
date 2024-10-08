@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-    <h2>Registration Form</h2>
+        <h1>Registration Form</h1>
     </header>
     <br>
-    <main>
-        <form action="action.php">
-            <p> Name*: <input type="text" placeholder="First Name*"> <input type="text" placeholder="Middle Name"> <input type="text" placeholder="Last Name*"></p>
-            
+    <form action="action.php" id="basic-form">
+        <div class="names">
+            Name*: <input type="text" placeholder="First Name*"> <input type="text" placeholder="Middle Name"> <input
+                type="text" placeholder="Last Name*">
+        </div>
+
+        <div class="information">
             <p>Father's Name*: <input type="text" placeholder="Father's name*"></p>
             <p>Mother's Name*: <input type="text" placeholder="Mother's name*"></p>
             <p>Contact Number* : <input type="number" placeholder="Contact Number*"></p>
@@ -30,7 +36,7 @@
             </p>
             <p>Email* : <input type="text" placeholder="E-mail"></p>
             <p>Aadhar Number(Pattern xxxx xxxx xxxx)* : <input type="text" placeholder="xxxx xxxx xxxx"></p>
-            <p>
+            <p class="common">
                 Course* : <select name="course" id="course">
                     <option value="Select Course">Select Course</option>
                     <option value="Cyber-Security">Cyber-Security</option>
@@ -46,7 +52,7 @@
                     <option value="Python">Python</option>
                 </select>
             </p>
-            <p>
+            <p class="common">
                 State* : <select name="State" id="Course">
                     <option value="Select State">Select State</option>
                     <option value="Bihar">Bihar</option>
@@ -65,17 +71,17 @@
                     <option value="Uttrakhand">Uttrakhand</option>
 
                 </select>
-                
+
             </p>
-                Country 
+            <p class="common">Country
                 <label for="22">
-                <input type="radio" name="India" value="india" id="22">India
+                    <input type="radio" name="India" value="india" id="22">India
                 </label>
                 <label for="24">
-                <input type="radio" name="India" value="other" id="24">Other
-            </label>
+                    <input type="radio" name="India" value="other" id="24">Other
+                </label></p>
             <p>
-                Gender* : <select name="gender" id="gender">
+                Gender* : <select name="gender" id="gender" class="common">
                     <option value="Select Gender">Select Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -83,7 +89,7 @@
                 </select>
             </p>
             <p>
-                Category* : <select name="category" id="category">
+                Category* : <select name="category" id="category" class="common">
                     <option value="Select Category">Select Category</option>
                     <option value="General">General</option>
                     <option value="SC">SC</option>
@@ -105,19 +111,15 @@
             <p>
                 <input type="checkbox" value="verify" name="verify">I am not Robot
             </p>
-            <input type="submit" value=" Submit ">
-            
+             <input type="submit" value=" Submit "  id="submit-btn">
+    </form>
+    <br><br>
+    <p id="feedbacktext">Feedback<br>
+        <textarea name="feedback" placeholder="Give Your Valuable Feedback"></textarea>
+    </p>
+    </div>
+<footer> Contributing CSS with &hearts; by Rajeev</footer>
 
-            
-        </form>
-        <br><br>
-        <footer>
-        <p>Feedback<br>
-            <textarea name="feedback" placeholder="Give Your Valuable Feedback"></textarea>
-        </p>
-    </footer>
-    </main>
-    
-    
 </body>
+
 </html>
