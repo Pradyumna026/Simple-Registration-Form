@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    font-family: "Mukta", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+body{
+    background: linear-gradient(45deg,#0F3443,#34E89E);
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+#basic-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}header{
+    text-align: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 12px ;
+    margin-top: 8px;
+}
+textarea{
+    border: 1px solid #ddd;
+    border-radius: 12px ;
+    padding: 20px;
+}
+h1{
+    border: 2px solid #ddd;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+
+}
+#feedbacktext{
+    margin-bottom: 20px;
+}
+#submit-btn{
+    margin-bottom: 10px;
+}
+.common{
+    margin-top: 20px;
+}
+#submit-btn{
+    background: transparent;
+    border: 2px solid #ddd;
+    color: #ffffff;
+}
+#submit-btn:hover{
+    transform: scale(1.1);
+    transition: 0.1s;
+    background-color: #ffffff;
+    color: black;
+}
+footer{
+    padding: 10px 10px;
+    text-align: center;
+    border:1px solid #ddd;
+    width: 80%;
+    margin-bottom: 20px;
+   
+}
+
+    </style>
 </head>
+
 <body>
     <header>
-    <h2>Registration Form</h2>
+        <h1>Registration Form</h1>
     </header>
     <br>
-    <main>
-        <form action="action.php">
-            <p> Name*: <input type="text" placeholder="First Name*"> <input type="text" placeholder="Middle Name"> <input type="text" placeholder="Last Name*"></p>
-            
+    <form id="basic-form">
+        <div class="names">
+            Name*: <input type="text" placeholder="First Name*"> <input type="text" placeholder="Middle Name"> <input
+                type="text" placeholder="Last Name*">
+        </div>
+
+        <div class="information">
             <p>Father's Name*: <input type="text" placeholder="Father's name*"></p>
             <p>Mother's Name*: <input type="text" placeholder="Mother's name*"></p>
             <p>Contact Number* : <input type="number" placeholder="Contact Number*"></p>
@@ -30,7 +116,7 @@
             </p>
             <p>Email* : <input type="text" placeholder="E-mail"></p>
             <p>Aadhar Number(Pattern xxxx xxxx xxxx)* : <input type="text" placeholder="xxxx xxxx xxxx"></p>
-            <p>
+            <p class="common">
                 Course* : <select name="course" id="course">
                     <option value="Select Course">Select Course</option>
                     <option value="Cyber-Security">Cyber-Security</option>
@@ -46,7 +132,7 @@
                     <option value="Python">Python</option>
                 </select>
             </p>
-            <p>
+            <p class="common">
                 State* : <select name="State" id="Course">
                     <option value="Select State">Select State</option>
                     <option value="Bihar">Bihar</option>
@@ -65,17 +151,17 @@
                     <option value="Uttrakhand">Uttrakhand</option>
 
                 </select>
-                
+
             </p>
-                Country 
+            <p class="common">Country
                 <label for="22">
-                <input type="radio" name="India" value="india" id="22">India
+                    <input type="radio" name="India" value="india" id="22">India
                 </label>
                 <label for="24">
-                <input type="radio" name="India" value="other" id="24">Other
-            </label>
+                    <input type="radio" name="India" value="other" id="24">Other
+                </label></p>
             <p>
-                Gender* : <select name="gender" id="gender">
+                Gender* : <select name="gender" id="gender" class="common">
                     <option value="Select Gender">Select Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -83,7 +169,7 @@
                 </select>
             </p>
             <p>
-                Category* : <select name="category" id="category">
+                Category* : <select name="category" id="category" class="common">
                     <option value="Select Category">Select Category</option>
                     <option value="General">General</option>
                     <option value="SC">SC</option>
@@ -105,19 +191,21 @@
             <p>
                 <input type="checkbox" value="verify" name="verify">I am not Robot
             </p>
-            <input type="submit" value=" Submit ">
-            
+             <input type="submit" value=" Submit "  id="submit-btn">
+    </form>
+    <br><br>
+    <p id="feedbacktext">Feedback<br>
+        <textarea name="feedback" placeholder="Give Your Valuable Feedback"></textarea>
+    </p>
+    </div>
+<footer> Contributing CSS with &hearts; by Rajeev</footer>
+<script>
+    const btn=document.getElementById('basic-form');
+btn.addEventListener('submit',()=>{
+    alert("form submitted sucessfully")
+})
+</script>
 
-            
-        </form>
-        <br><br>
-        <footer>
-        <p>Feedback<br>
-            <textarea name="feedback" placeholder="Give Your Valuable Feedback"></textarea>
-        </p>
-    </footer>
-    </main>
-    
-    
 </body>
+
 </html>
